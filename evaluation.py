@@ -44,6 +44,8 @@ def evaluate(prediction, true_labels):
 def main():
     model_list = load_models()
     _, _, (X_test, y_test) = load_mnist()
+    
+    print(len(y_test))
 
     pred_list = []
 
@@ -54,7 +56,8 @@ def main():
         # Check a single model accuracy
         acc = evaluate(pred, y_test)
         print("Model-{}: {:>.5%}".format(idx, acc))
-
+    
+    print(len(pred_list))
     pred_list = np.asarray(pred_list)
     pred_mean = np.mean(pred_list, 0)
 
