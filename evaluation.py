@@ -11,8 +11,8 @@ def load_models():
     model_list = []
 
     model_list.append(VGGNet("model/vggnet.h5"))
-    model_list.append(ResNet("model/resnet.h5"))
-    model_list.append(VGGNet5("model/vggnet5.h5"))
+    # model_list.append(ResNet("model/resnet.h5"))
+    # model_list.append(VGGNet5("model/vggnet5.h5"))
 
     return model_list
 
